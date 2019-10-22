@@ -52,6 +52,21 @@ designed:
     twig:
         form_themes:
             - '@FOSCKEditor/Form/ckeditor_widget.html.twig'
+            
+            
+If you are using EasyAdmin version 2.3.1 or above, this will not work. You
+should instead add the  ``ckeditor_widget.html.twig`` form theme to 
+config/packages/easy_admin.yaml:
+
+.. code-block:: yaml
+
+    # config/packages/easy_admin.yaml
+    easy_admin:
+        design:
+        form_theme:
+            - "@EasyAdmin/form/bootstrap_4.html.twig"
+            - "@FOSCKEditor/Form/ckeditor_widget.html.twig"
+
 
 Using the Rich Text Editor
 --------------------------
